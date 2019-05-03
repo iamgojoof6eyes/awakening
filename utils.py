@@ -11,6 +11,15 @@ class Chain:
         self.south = south
         self.left = east
         self.right = west
+        if north is not None:
+            north.south = self
+        if south is not None:
+            south.north = self
+        if east is not None:
+            east.west = None
+        if west is not None:
+            west.east = None
+
 
 
 class Location:
