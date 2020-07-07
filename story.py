@@ -1,4 +1,4 @@
-import utils
+import models
 
 '''
 Every Location has:
@@ -14,10 +14,10 @@ Every object has:
     used_with (like key can have lock as its used_with) - a list of ObjectOfInterest objects
 '''
 
-forest = utils.Location
-cave = utils.Location
+forest = models.Location
+cave = models.Location
 
-beach = utils.Location(name="Beach", visited=False, view="A beach with bright sunlight and waves crashing on the"
+beach = models.Location(name="Beach", visited=False, view="A beach with bright sunlight and waves crashing on the"
                                                          "shore. Straight ahead is a forest, while to the right"
                                                          "is a cave. The cave gives off an eerie vibe.",
-                       ooi=['rock', 'broken boat'], chain=utils.Chain(north=forest, west=cave))
+                        ooi=['rock', 'broken boat'], chain=models.Chain(north=forest, west=cave))

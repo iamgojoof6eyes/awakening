@@ -21,7 +21,6 @@ class Chain:
             west.east = None
 
 
-
 class Location:
     def __init__(self, name, visited, view, ooi, chain):
         self.name = name
@@ -32,9 +31,9 @@ class Location:
 
 
 class ObjectOfInterest:
-    def __init__(self, name, descrip, used_with):
+    def __init__(self, name, desc, used_with):
         self.name = name
-        self.descrip = descrip
+        self.desc = desc
         self.used_with = used_with
 
 
